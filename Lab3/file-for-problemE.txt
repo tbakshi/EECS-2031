@@ -1,0 +1,45 @@
+/***************************************
+* EECS2031Z Lab3
+* Filename: file-for-problemE.txt
+* Author: Baskhi, Tania
+* Email: tbakshi@my.yorku.ca
+* eecs_num: 215399462
+****************************************/
+Breakpoint 1, main () at swap.c:11
+(gdb) display mainA
+mainA = 1
+(gdb) display mainB
+mainB = 2000
+(gdb) continue
+Continuing.
+
+Breakpoint 2, swap (x=1, y=20000) at swap.c:18
+(gdb) display x
+x = 1
+(gdb) display y
+y = 2000
+(gdb) display mainA
+No symbol "mainA" in current context. //The reason we get this is because the variable isn't defined in the method.
+(gdb) display mainB
+No symbol "mainB" in current context. //The reason we get this is because the variable isn't defined in the method.
+(gdb) continue
+Continuing.
+
+Breakpoint 3, swap (x=20000, y=1) at swap.c:21
+(gdb) display x //Yes they are swapped.
+x = 2000
+(gdb) display y //Yes they are swapped.
+y = 1
+(gdb) continue
+Continuing.
+
+Breakpoint 4, main () at swap.c:12
+(gdb) display mainA //Yes they are swapped.
+mainA = 1
+(gdb) display mainB //Yes they are swapped.
+mainB = 2000
+(gdb) display x
+No symbol "x" in current context. //The reason we get this is because the variable isn't defined in the method.
+(gdb) display y
+No symbol "y" in current context. //The reason we get this is because the variable isn't defined in the method.
+(gdb) quit
